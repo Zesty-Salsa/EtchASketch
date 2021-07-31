@@ -1,0 +1,31 @@
+body {
+    background-color: lightgreen;
+    margin: auto; 
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #slide-container {
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .container {
+    height: 80%;
+    width: 80%;
+    padding: 1em;
+    height: 32em;
+    margin:  2em auto;
+    background-color: white;
+    border: solid black 2px;
+    display: grid;
+    gap: 1px;
+    resize: both;
+    overflow: auto;
+  }
+  
+  #sizerange{
+    
+  }
