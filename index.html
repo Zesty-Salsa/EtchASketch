@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script> 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +10,21 @@
 </head>
 
 <body> 
-    <h1>Etch-a-Sketch</h1>
-
-    <div id = "slide-container">
-    <p>Use me to change the resolution.</p>
-        <input type="range" min="4" max="100" defaultvalue="16" id="sizeRange" class="slider">
-    </div>
-
-    <div class = "container"></div>
-    <script src="script.js"></script>
+    <div id = "backgroundContainer" class = "default">
+        <h1>Etch-a-Sketch</h1>
+      
+        <div id = "slide-container">
+          <p>Use me to change the resolution or to clear your sketch.</p>
+            <input type="range" min="1" max="100" value="16" id="sizeRange" class="slider">
+        <span id="resolutionValue"></span>
+        </div>
+      
+        <div id="button-container">
+          <input type="button" class="btn" id="changeColors" value="Klick Me 4 Krazy Kolorz" onclick="toggle(this);" >
+        </div>
+      
+        <div class = "container"></div>
+      </div> 
 </body>
 
 </html>

@@ -1,31 +1,163 @@
-body {
-    background-color: lightgreen;
-    margin: auto; 
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em 0 0.5em 0;
+  font-size: 3em;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+p {
+  padding: 0 0 1em 0;
+  font-size: 1em;
+}
+
+#backgroundContainer {
+  width: 100%;
+  height: 200vh;
+}
+
+.default {
+  background: linear-gradient(to top right, #009000, #22e666);
+}
+
+.rainbow {
+  background: linear-gradient(to bottom right, red,orange,yellow,green,blue,indigo,violet);
+  background-size: 1000% 1000%;
+  animation: backgroundGradient 2.5s ease infinite;
+}
+
+.grey {
+  background: linear-gradient(to bottom, #000000, #ffffff);
+}
+
+@keyframes backgroundGradient {
+  0% {
+    background-position: 0% 0%;
   }
-  
-  h1 {
-    text-align: center;
+  25% {
+    background-position:  50% 25%;
   }
-  
-  #slide-container {
-    margin: 0 auto;
-    text-align: center;
+  50% {
+    background-position: 100% 50%;
   }
-  
+  75% {
+    background-position: 50% 25%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+#slide-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#button-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container {
+  height: 30em;
+  width: 30em;
+  padding: 1em;
+  margin:  2em auto;
+  background-color: lightgrey;
+  border: solid black 2px;
+  display: grid;
+  resize: both;
+  overflow: auto;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
   .container {
-    height: 80%;
-    width: 80%;
+    height: 20em;
+    width: 20em;
     padding: 1em;
-    height: 32em;
     margin:  2em auto;
-    background-color: white;
+    background-color: lightgrey;
     border: solid black 2px;
     display: grid;
-    gap: 1px;
     resize: both;
     overflow: auto;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
   }
-  
-  #sizerange{
-    
+  #backgroundContainer {
+    width: 100%;
+    height: 250vh;
   }
+}
+
+#sizeRange {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 10em;
+  width: 20%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity 1s;
+  height: 15px;
+  border-radius: 5px; 
+}
+
+.btn {
+  border-radius: 20px;
+  margin: 15px 10px 0px 10px;
+  padding: 10px 5px;
+  color: white;
+  font-size: 1em;
+  border: solid white 2px;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+  text-shadow: 2px 1px black;
+  background: linear-gradient(to bottom right, red,orange,yellow,green,blue,indigo,violet); 
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #04AA6D;
+  cursor: pointer;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #00916D;
+  cursor: pointer;
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+}
+
+#sizeRange:hover {
+  opacity: 1; 
+}
+
+#resolutionValue{
+  padding: 1em;
+  font-size: 20px;
+  position: absolute;
+  transform: translateY(-1em);
+}
